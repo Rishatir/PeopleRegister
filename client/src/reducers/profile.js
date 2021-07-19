@@ -4,7 +4,6 @@ import {
   CLEAR_PROFILE,
   UPDATE_PROFILE,
   GET_PROFILES,
-  GET_REPOS
 } from "../actions/types";
 
 const initialState = {
@@ -45,12 +44,6 @@ export default (state = initialState, action) => {
         repos: [],
         loading: false
       };
-    case GET_REPOS:
-      return {
-        ...state,
-        repos: payload,
-        loading: false,
-      }
     default:
       return state;
   }
